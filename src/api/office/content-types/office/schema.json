@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "offices",
+  "info": {
+    "singularName": "office",
+    "pluralName": "offices",
+    "displayName": "Office",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "office_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "address_1": {
+      "type": "string"
+    },
+    "address_2": {
+      "type": "string"
+    },
+    "office_location": {
+      "type": "enumeration",
+      "enum": [
+        "Christchurch",
+        "Sydney",
+        "Yokohama"
+      ]
+    },
+    "country": {
+      "type": "enumeration",
+      "enum": [
+        "New Zealand",
+        "Australia",
+        "Japan"
+      ]
+    },
+    "post_code": {
+      "type": "string"
+    },
+    "prefecture": {
+      "type": "enumeration",
+      "enum": [
+        "Kanagawa"
+      ]
+    },
+    "city": {
+      "type": "enumeration",
+      "enum": [
+        "Christchurch",
+        "Sydney",
+        "Yokohama"
+      ]
+    },
+    "ward": {
+      "type": "string"
+    },
+    "members": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::member.member",
+      "mappedBy": "office_location"
+    }
+  }
+}
