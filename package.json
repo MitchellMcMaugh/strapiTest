@@ -12,6 +12,7 @@
     "strapi": "strapi"
   },
   "dependencies": {
+    "@strapi/helper-plugin": "^4.25.12",
     "@strapi/plugin-cloud": "5.4.0",
     "@strapi/plugin-users-permissions": "5.4.0",
     "@strapi/strapi": "5.4.0",
